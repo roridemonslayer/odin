@@ -16,7 +16,7 @@ Built from scratch: no LangChain, no assistant frameworks. Every model it uses i
 
 | Project | What it does well | What it doesn't do |
 |---|---|---|
-| [isair/jarvis](https://github.com/isair/jarvis) (2k★) | Local voice assistant, memory viewer, tools | Waits for you to speak |
+| [isair/jarvis](https://github.com/isair/jarvis) (2k★) | Local voice, joins room conversations, knowledge-graph memory, MCP tools, published evals | Proactivity is marked ❌ Missing in its own roadmap ([#386](https://github.com/isair/jarvis/issues/386)); meetings need a manual "Pause Listening" |
 | [PanPenek/JarvisAi](https://github.com/PanPenek/JarvisAi) | Wake word, 31 tools, screen vision, memory | Waits for you to speak |
 | [madcato/voicebot](https://github.com/madcato/voicebot) | Barge-in, ambient mode, proactive suggestions from screen captures | No interruption timing, no measured false-alarm rate |
 | ChatGPT Pulse | Proactive daily briefing | Text cards once a day, cloud only, not real time, not voice |
