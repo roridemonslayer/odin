@@ -99,6 +99,24 @@ For each component, answer:
 - How do I turn "Sunday" or "end of week" into a real date?
 - How do I measure accuracy? (Label 50 of my own sent emails.)
 
+## 9. Mac control
+**Job:** let ODIN play music, open Chrome, call, text, and change settings.
+
+**Questions:**
+- What is AppleScript, and how does `osascript` run it from Python?
+- How do macOS permissions work (Accessibility, Full Disk Access, Automation)?
+- How does the Messages database (`chat.db`) store texts?
+- How does Continuity route a call from a Mac through the iPhone?
+
+## 10. Adapting: tools that build tools
+**Job:** when ODIN can't do something, build a new tool safely.
+
+**Questions:**
+- How can an agent write, test, and save its own tools?
+- How do I keep that safe (review, sandbox, permissions)?
+
+**Key reading:** "Voyager: An Open-Ended Embodied Agent with Large Language Models" (Wang et al., 2023), which introduced a growing skill library; "Large Language Models as Tool Makers" (Cai et al., 2023).
+
 ---
 
 ## Learning log
