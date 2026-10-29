@@ -23,4 +23,5 @@ Models: LLM = qwen3 via Ollama (localhost:11434, use /no_think). STT = Whisper. 
 
 Phases: 0 research → 1 text brain → 2 memory → 3 talks first → 4 right moment → 5 proactive benchmark → 6 voice → 7 wake word (DEMO) → 8 in the room (rolling transcript, "Odin, what do you think?") → 9 deep memory (knowledge graph, diary, redaction) → 10 more tools (web, screen, files, MCP) → 11 everyday use (dictation, chat window, task queue) → 12 desktop app → 13 evals.
 Do not copy code from other projects (e.g. isair/jarvis is non-commercial licensed). Reimplement ideas only.
+Full behavior of every part: SPEC.md (read only the section for the current task; it is long).
 Current phase: 0/1.
