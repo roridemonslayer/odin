@@ -1,23 +1,25 @@
 # ODIN plan (short context for coding agents)
 
-ODIN = Observant Digital Intelligence Network. A personal voice assistant that talks first: it watches calendar/email/GitHub and speaks up on its own when something matters.
+ODIN = Observant Digital Intelligence Network. A personal voice assistant that talks first at the right moment: watchers (calendar, email, GitHub, promises the user made) emit events; a scorer decides if an event is worth saying; an interruptibility check decides if now is a good time (on a call? typing? just finished something?); every message keeps a reason trace; feedback ("not now") tunes the threshold.
+
+What sets it apart from other Jarvis projects: they wait to be asked. ODIN decides whether AND when to interrupt, explains why, catches the user's promises, and publishes its proactive precision/recall.
 
 Rules:
 - Pure Python. No LangChain or agent/assistant frameworks.
 - The owner writes the code and must understand every line. Explain, review, and suggest. Do not write whole features unless asked.
-- Every feature gets a measured number (latency, accuracy, false alarms).
-- Silence is the default. Proactive messages must be rare and worth it.
+- Every feature gets a measured number.
+- Silence is the default.
 
 Layout:
-- odin/agent/      LLM loop: call model → run tool → feed result back → repeat
-- odin/tools/      plain Python functions the model can call
-- odin/memory/     facts about the user (SQLite, embeddings later)
-- odin/watchers/   poll calendar/email/github, emit events
-- odin/proactive/  score events: urgency × relevance × (1 − annoyance)
-- odin/audio/      wake word, speech-to-text, text-to-speech
-- bench/           latency and false-alarm benchmarks
+- odin/agent/          LLM loop: call model → run tool → feed result back → repeat
+- odin/tools/          plain Python functions the model can call
+- odin/memory/         facts about the user
+- odin/watchers/       calendar, email, github, promises.py
+- odin/proactive/      scorer.py, moment.py (interruptibility), trace.py (why), feedback.py
+- odin/audio/          wake word, speech-to-text, text-to-speech
+- bench/               proactive precision/recall, latency, wake word false triggers
 
 Models: LLM = qwen3 via Ollama (localhost:11434, use /no_think). STT = Whisper. TTS = Piper or Kokoro. Wake word = small model trained by the owner.
 
-Phases: 0 research → 1 text brain → 2 memory → 3 talks first + pushback → 4 voice → 5 wake word → 6 benchmarks.
+Phases: 0 research → 1 text brain → 2 memory → 3 talks first → 4 right moment → 5 proactive benchmark → 6 voice → 7 wake word → 8 polish.
 Current phase: 0/1.

@@ -76,13 +76,28 @@ For each component, answer:
 
 **Key reading:** the openWakeWord and Picovoice Porcupine docs (to learn the approach; I train my own).
 
-## 7. Proactive scorer: ODIN's core
-**Job:** decide whether an event is worth interrupting me.
+## 7. Proactive scorer and interruptibility: ODIN's core
+**Job:** decide whether an event is worth saying, and whether now is a good time.
 
 **Questions:**
 - Start with rules: what makes something urgent?
+- What signals predict that someone can be interrupted? (Typing, calls, app switches, time of day.)
+- What is the cost of interrupting vs. the cost of waiting?
 - How do I log my "not now" feedback and learn a threshold from it?
-- How do other products handle notification fatigue? (Research on phone notifications.)
+- How do I build a labeled benchmark of "should speak / should stay quiet"? What are precision and recall?
+
+**Key reading:**
+- Eric Horvitz's Microsoft Research work on attention and interruption (e.g. Horvitz & Apacible, "Learning and Reasoning about Interruption," 2003)
+- Fogarty et al., "Predicting Human Interruptibility with Sensors" (2005)
+- How ChatGPT Pulse and Gemini's proactive assistant work, and what they don't do
+
+## 8. Promise catcher
+**Job:** find commitments in what I wrote ("I'll email you Sunday") and remind me.
+
+**Questions:**
+- Can a small local LLM reliably extract "who, what, by when" from an email?
+- How do I turn "Sunday" or "end of week" into a real date?
+- How do I measure accuracy? (Label 50 of my own sent emails.)
 
 ---
 
