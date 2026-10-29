@@ -72,6 +72,9 @@ A small model trained on my own recordings, not a downloaded "Hey Jarvis."
 ### 9. Memory you can see
 Facts about you live in plain records you can read, edit, and delete.
 
+### 10. Everything else a complete assistant does
+ODIN also covers what the best local assistants do: it joins conversations in the room ("Odin, what do you think?"), keeps knowledge-graph memory and a daily diary, removes sensitive info before saving, uses web/screen/file/MCP tools, does dictation, has a text chat window and a task queue, and comes as a desktop app. All of it is reimplemented from scratch (see Phases 8–12).
+
 ---
 
 ## How it works
@@ -142,14 +145,50 @@ Each phase starts with research ([RESEARCH.md](RESEARCH.md)) and ends with notes
 - [ ] Push-to-talk speech-to-text
 - [ ] Text-to-speech, streamed sentence by sentence
 - [ ] Speak proactive messages out loud
+- [ ] Echo cancellation (so it doesn't hear itself)
 
 ### Phase 7: wake word
 - [ ] Record samples, train a small model
+- [ ] Say "Odin" anywhere in a sentence, not only at the start
 - [ ] Measure false triggers per hour
 
-### Phase 8: polish
-- [ ] Latency benchmarks
-- [ ] Demo video
+**🎬 Demo milestone:** at this point ODIN talks first, out loud, at the right moment. Record the demo video here.
+
+### Phase 8: in the room
+- [ ] Short rolling transcript of nearby speech, temporary and never saved
+- [ ] "Odin, what do you think?" uses the recent conversation as context
+- [ ] Auto-pause listening when a call starts (reuses Phase 4 call detection)
+
+### Phase 9: deep memory
+- [ ] Knowledge graph: people, places, plans, and how they connect
+- [ ] Daily diary summarizing conversations
+- [ ] Hybrid search over memory: keyword + vector (from kestrel)
+- [ ] Remove sensitive info (passwords, card numbers) before saving
+- [ ] Memory viewer
+
+### Phase 10: more tools
+- [ ] Web search and fetch
+- [ ] Weather, location
+- [ ] Read the screen (screenshot → text)
+- [ ] File access
+- [ ] MCP client, so any MCP server plugs in (smart home, GitHub, Slack)
+
+### Phase 11: everyday use
+- [ ] Hold-a-key dictation into any app
+- [ ] Text chat window that shares the voice conversation and memory
+- [ ] Task queue: hand ODIN a long job and check back later
+- [ ] Low power mode
+
+### Phase 12: the app
+- [ ] Desktop face/orb that reacts when ODIN listens, thinks, or wants to talk
+- [ ] Setup wizard (pick models, mic)
+- [ ] Settings window
+- [ ] Packaged Mac app
+
+### Phase 13: prove it
+- [ ] Reply-quality evals (does it answer well, call the right tool)
+- [ ] Proactive benchmark results (Phase 5) published side by side
+- [ ] Latency numbers for every stage
 
 ---
 
@@ -158,3 +197,4 @@ Each phase starts with research ([RESEARCH.md](RESEARCH.md)) and ends with notes
 2. No line I can't explain. If I don't understand it, it doesn't get merged.
 3. Every feature gets a number.
 4. Silence is the default. Speaking has to earn it.
+5. Learn from other projects, never copy their code. Ideas are free; code has licenses.

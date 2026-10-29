@@ -21,5 +21,6 @@ Layout:
 
 Models: LLM = qwen3 via Ollama (localhost:11434, use /no_think). STT = Whisper. TTS = Piper or Kokoro. Wake word = small model trained by the owner.
 
-Phases: 0 research → 1 text brain → 2 memory → 3 talks first → 4 right moment → 5 proactive benchmark → 6 voice → 7 wake word → 8 polish.
+Phases: 0 research → 1 text brain → 2 memory → 3 talks first → 4 right moment → 5 proactive benchmark → 6 voice → 7 wake word (DEMO) → 8 in the room (rolling transcript, "Odin, what do you think?") → 9 deep memory (knowledge graph, diary, redaction) → 10 more tools (web, screen, files, MCP) → 11 everyday use (dictation, chat window, task queue) → 12 desktop app → 13 evals.
+Do not copy code from other projects (e.g. isair/jarvis is non-commercial licensed). Reimplement ideas only.
 Current phase: 0/1.
