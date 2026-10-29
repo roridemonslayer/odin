@@ -6,7 +6,7 @@ A personal voice assistant that **talks first, at the right moment**.
 
 Most assistants wait for you to speak. ODIN watches your calendar, inbox, and projects, and speaks up when something matters: *"Your 1:1 is in 20 minutes and it's across the building."* It also decides **when** you can be interrupted. It won't cut in while you're on a call or deep in focus, and it can always tell you **why** it spoke.
 
-Built from scratch: no LangChain, no assistant frameworks. Every model it uses is studied and documented in [RESEARCH.md](RESEARCH.md). What every part does is in [SPEC.md](SPEC.md).
+Built from scratch: no LangChain, no assistant frameworks. Every model it uses is studied and documented in [RESEARCH.md](RESEARCH.md).
 
 > 🚧 Work in progress. See the [roadmap](#roadmap).
 

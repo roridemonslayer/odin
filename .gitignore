@@ -8,3 +8,4 @@ memory/*.db
 recordings/
 models/
 .DS_Store
+SPEC.md
